@@ -2,7 +2,7 @@
 
 **Ein Tool von DIE LINKE Emsland zur Überprüfung der eigenen Miete anhand des qualifizierten Mietspiegels der Stadt Lingen (Ems), Stand 1. April 2023.**
 
-🔗 **Live:** [dielinke-emsland.de](https://dielinke-emsland.de/service/mietwucher-lingen/)
+🔗 **Live:** [dielinke-emsland.de](https://www.dielinke-emsland.de/service/mietwucher-lingen/)
 
 ---
 
