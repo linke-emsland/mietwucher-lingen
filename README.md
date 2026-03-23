@@ -23,18 +23,14 @@ Viele Mieter:innen in Lingen wissen nicht, ob ihre Miete rechtlich zulässig ist
 - **Modifiziertes Baujahr** berechnen (für sanierte Gebäude bis Baujahr 2005)
 - **Zuschläge** für Fahrstuhl (+5 %) und Penthouse (+14 %)
 - **Einordnung** des Ergebnisses (OK / Ordnungswidrigkeit / Straftat)
-- **PDF-Export** über Browser-Druckfunktion
 
 
 ---
 
 ## Technisches
 
-Das Tool besteht aus einer einzigen, selbstständigen HTML-Datei (`mietwucher-lingen.html`) ohne externe Abhängigkeiten zur Laufzeit.
-
 | Eigenschaft | Details |
 |---|---|
-| Dateityp | Einzelne `.html`-Datei |
 | Externe Laufzeit-Abhängigkeiten | nur Google Fonts |
 | Datenspeicherung | Keine – rein clientseitig |
 | Framework | Vanilla JavaScript |
@@ -55,7 +51,7 @@ Die Berechnung folgt dem **qualifizierten Mietspiegel der Stadt Lingen (Ems)** v
 ### Berechnungsablauf
 
 1. **Basismiete** (€/m²) aus Tabelle nach Wohnfläche und Baualtersklasse
-2. **Modifiziertes Baujahr** bei Modernisierungen (≥ 4 Punkte, nur Baujahre bis 2005)
+2. **Modifiziertes Baujahr** 
 3. **Lagezuschlag/-abschlag** je nach Wohnlage:
    - Innenstadt: **+8 %**
    - Stadtgebiet: **±0 %**
@@ -79,5 +75,3 @@ Die Berechnung folgt dem **qualifizierten Mietspiegel der Stadt Lingen (Ems)** v
 ## Warum Open Source?
 
 Wir veröffentlichen diesen Code aus Überzeugung: Werkzeuge, die Menschen bei der Durchsetzung ihrer Rechte helfen, sollen offen und nachvollziehbar sein. Jede:r soll prüfen können, ob die Berechnung korrekt ist – und das Tool gerne weiterentwickeln oder für andere Kommunen adaptieren.
-
-Wer den Code für andere Mietspiegel anpassen möchte: Die relevanten Datentabellen befinden sich direkt im `<script>`-Bereich der HTML-Datei als JavaScript-Objekte (`BESCHAFFENHEIT`, `WOHNLAGE`, `MOD_BAUJAHR`).
