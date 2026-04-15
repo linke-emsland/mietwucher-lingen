@@ -215,10 +215,21 @@ function initApp() {
     if (!gebiet) gebiet = "Stadtgebiet";
 
     // Zuschläge
-    const lageZuschlag      = gebiet === "Innenstadt" ? 8 : gebiet === "Ortsteile" ? -10 : 0;
-    const fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
-    const penthouseZuschlag = penthouse === "ja" ? 14 : 0;
-    const gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
+    const neueZahlen = true 
+    // Der neue qualifizierte Mietspiegel bewertet die Wohnlage und ob es sich um eine Penthouse-Wohnung handelt niedriger.
+
+    if (neueZahlen){
+      const lageZuschlag      = gebiet === "Innenstadt" ? 4 : gebiet === "Ortsteile" ? -5 : 0;
+      const fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
+      const penthouseZuschlag = penthouse === "ja" ? 8 : 0;
+      const gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
+    }else{
+      const lageZuschlag      = gebiet === "Innenstadt" ? 8 : gebiet === "Ortsteile" ? -10 : 0;
+      const fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
+      const penthouseZuschlag = penthouse === "ja" ? 14 : 0;
+      const gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
+    }
+    
 
     // Modifiziertes Baujahr & Basismiete
     const wertBaujahr = getModBaujahr(baujahr, modPunkte, MOD_BAUJAHR);

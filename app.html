@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mietrechner Lingen – DIE LINKE Emsland</title>
+    <title>Mietrechner Lingen – Die Linke Emsland</title>
     <link
       rel="stylesheet"
       href="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/style.css"
@@ -12,15 +12,15 @@
   <body>
     <header>
         <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/wohnlage.js"></script>
-        <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/beschaffenheit.js"></script>
-        <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/mod_baujahr.js"></script>
+        <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/beschaffenheit2026.js"></script>
+        <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/mod_baujahr2026.js"></script>
         <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/strassennamen.js"></script>
         <script src="https://www.dielinke-emsland.de/fileadmin/websites/kv_emsland/Kampagnen/Mietwucher_Lingen/script.js"></script>
         <script>document.addEventListener("DOMContentLoaded", function() { initApp(); });</script>
       <div class="logo-row">
       <h1>Mietwucher-Checker<br />Lingen (Ems)</h1>
     </header>
-      <div class="card"><p>Überprüfe, ob deine Miete im Rahmen des Mietspiegels 2023 liegt.</p>
+      <div class="card"><p>Überprüfe, ob deine Miete im Rahmen des Mietspiegels 2026 liegt.</p>
       </div>
     <div class="container">
       <!-- Schritt 1: Wohnung -->
@@ -169,18 +169,20 @@
             </select>
           </div>
           <div class="mod-item">
-            <div class="mod-name">Innenanstrich / Tapezieren<small>durch Vermieter</small></div>
+            <div class="mod-name">Innenausbau<small>z.B. Decken, Fußböden, Treppen</small></div>
             <select id="mod_innen" onchange="updatePunkte()">
               <option value="0">keine</option>
-              <option value="1">≤ 5 Jahre</option>
+              <option value="2">≤ 5 Jahre</option>
+              <option value="2">≤ 10 Jahre</option>
+              <option value="2">≤ 15 Jahre</option>
+              <option value="1">≤ 20 Jahre</option>
             </select>
           </div>
           <div class="mod-item">
             <div class="mod-name">Grundrissverbesserung</div>
             <select id="mod_grundriss" onchange="updatePunkte()">
               <option value="0">keine</option>
-              <option value="2">≤ 5 Jahre</option>
-              <option value="1">≤ 10 Jahre</option>
+              <option value="2">Ja</option>
             </select>
           </div>
         </div>
@@ -272,9 +274,9 @@
 
         <p class="disclaimer">
           Diese Berechnung basiert auf dem qualifizierten Mietspiegel der Stadt
-          Lingen (Ems), Stand 1. April 2023. Sie dient nur zur Orientierung und
+          Lingen (Ems), Stand 1. April 2026. Sie dient nur zur Orientierung und
           ersetzt keine Rechtsberatung.<br />
-          <a href="https://www.lingen.de/bauen-wirtschaft/wohnen-lingen/mietpreisspiegel/mietspiegel.html">Mietspiegel Lingen 2023</a>
+          <a href="https://www.lingen.de/bauen-wirtschaft/wohnen-lingen/mietpreisspiegel/mietspiegel.html">Mietspiegel Lingen 2026</a>
         </p>
       </div>
 
@@ -285,7 +287,7 @@
       <p class="disclaimer" style="margin-top: 16px">
         <a href="https://github.com/linke-emsland/mietwucher-lingen">💻 Check unsere Github-Repo</a>
       </p>
-  
+      
     </div>
 
   </body>
