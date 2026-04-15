@@ -218,16 +218,21 @@ function initApp() {
     const neueZahlen = true 
     // Der neue qualifizierte Mietspiegel bewertet die Wohnlage und ob es sich um eine Penthouse-Wohnung handelt niedriger.
 
+    let lageZuschlag;
+    let fahrstuhlZuschlag;
+    let penthouseZuschlag; 
+    let gesamtZuschlag;    
+
     if (neueZahlen){
-      const lageZuschlag      = gebiet === "Innenstadt" ? 4 : gebiet === "Ortsteile" ? -5 : 0;
-      const fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
-      const penthouseZuschlag = penthouse === "ja" ? 8 : 0;
-      const gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
+      lageZuschlag      = gebiet === "Innenstadt" ? 4 : gebiet === "Ortsteile" ? -5 : 0;
+      fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
+      penthouseZuschlag = penthouse === "ja" ? 8 : 0;
+      gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
     }else{
-      const lageZuschlag      = gebiet === "Innenstadt" ? 8 : gebiet === "Ortsteile" ? -10 : 0;
-      const fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
-      const penthouseZuschlag = penthouse === "ja" ? 14 : 0;
-      const gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
+      lageZuschlag      = gebiet === "Innenstadt" ? 8 : gebiet === "Ortsteile" ? -10 : 0;
+      fahrstuhlZuschlag = fahrstuhl === "ja" ? 5 : 0;
+      penthouseZuschlag = penthouse === "ja" ? 14 : 0;
+      gesamtZuschlag    = lageZuschlag + fahrstuhlZuschlag + penthouseZuschlag;
     }
     
 
